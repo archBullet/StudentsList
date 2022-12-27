@@ -57,9 +57,12 @@ class Student {
     {
         return $this->residence;
     }
+
+	public function getName() {
+		return $this->name;
+	}
+
+	public function getSurname() {
+		return $this->surname;
+	}
 }
-
-$student1 = new Student('Artur', 'Abzalov', 'm', '11b', 'bull@mail.ru',
-    333, 1993, 'residence');
-
-echo $student1->getFullName();
