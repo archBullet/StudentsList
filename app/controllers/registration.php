@@ -1,7 +1,6 @@
 <?php
 
-require_once('../Students/app/database/StudentsDataGateway.php');
-// require_once('../Students/app/model/Student.php');
+require_once 'app/database/StudentsDataGateway.php';
 
 
 $name = '';
@@ -15,7 +14,6 @@ $residence = '';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn'])) {
-	echo 'POST';
 	$name = $_POST['name'];
 	$surname = $_POST['surname'];
 	$gender = $_POST['gender'];
@@ -25,10 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn'])) {
 	$score = $_POST['score'];
 	$residence = $_POST['residence'];
 
-	echo $name;
-	echo $birthYear;
-	
-	// $stud = new Student($name, $surname, $gender, $birthYear, $email, $group, $score, $residence);
-	// var_dump($stud);
-	$pdo->addStudent(new Student($name, $surname, $gender, $birthYear, $email, $group, $score, $residence));
+	try {
+		$pdo->addStudent(new Student($name, $surname, $gender, $birthYear, $email, $group, $score, $residence));
+	} catch (PDOException $e){
+		echo $e;
+	}
+
 }

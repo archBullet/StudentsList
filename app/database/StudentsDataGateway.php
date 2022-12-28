@@ -1,8 +1,8 @@
 <?php
 
 
-require_once('../Students/app/database/connect.php');
-require_once('../Students/app/model/Student.php');
+require_once 'app/database/connect.php';
+require_once 'app/model/Student.php';
 
 class StudentsDataGateway
 {
@@ -15,21 +15,40 @@ class StudentsDataGateway
 
 	public function addStudent(Student $student)
 	{
-		$this->pdo->query("INSERT INTO 
-		students (
-			`name`, `surname`, `gender`, 
-			`group_number`, `email`, `score`, 
-			`birth_year`, `residence`) 
-		VALUES ('{$student->getName()}', '{$student->getSurname()}', '{$student->getGender()}', '{$student->getGroup()}', '{$student->getEmail()}', {$student->getScore()}, {$student->getBirthYear()}, '{$student->getResidence()}')");
-		// // $this->pdo->prepare("INSERT INTO 
-		// // students (
-		// // 	`name`, `surname`, `gender`, 
-		// // 	`group_number`, `email`, `score`, 
-		// // 	`birth_year`, `residence`, `hash`) 
-		// // VALUES (
-		// // 	:name, :surname, :gender, 
-		// // 	:group_name, :email, :score, 
-		// // 	:birth_year, :residence, :hash)");
+		$stmt = $this->pdo->prepare(
+			"INSERT INTO students (
+							`name`, 
+							`surname`, 
+							`gender`, 
+							`group_number`, 
+							`email`, 
+							`score`, 
+							`birth_year`, 
+							`residence`, 
+							`hash`) 
+						VALUES (
+							:name, 
+							:surname, 
+							:gender, 
+							:group_name,
+							:email, 
+							:score, 
+							:birth_year, 
+							:residence, 
+							:hash)"
+		);
+
+		$stmt->bindValue(':name', $student->getName());
+		$stmt->bindValue(':surname', $student->getSurname());
+		$stmt->bindValue(':gender', $student->getGender());
+		$stmt->bindValue(':group_name', $student->getGroup());
+		$stmt->bindValue(':email', $student->getEmail());
+		$stmt->bindValue(':score', $student->getScore());
+		$stmt->bindValue(':birth_year', $student->getBirthYear());
+		$stmt->bindValue(':residence', $student->getResidence());
+		$stmt->bindValue(':hash', 'Arur');
+		$stmt->execute();
+
 		return $this;
 	}
 }

@@ -1,5 +1,5 @@
 <?php
-require_once('app/controllers/registration.php');
+require_once 'app/controllers/registration.php';
 
 ?>
 
@@ -29,7 +29,7 @@ require_once('app/controllers/registration.php');
 			</div>
 			<div class="col-12">
 				<label for="inputState" class="form-label">Пол</label>
-				<select id="inputState" name="gender" value="<?= $gender ?>" class="form-select">
+				<select id="inputState" name="gender" class="form-select">
 					<option selected></option>
 					<option value="m">Мужской</option>
 					<option value="f">Женский</option>
@@ -41,7 +41,7 @@ require_once('app/controllers/registration.php');
 			</div>
 			<div class="col-12">
 				<label for="Mail" class="form-label">Электронная почта</label>
-				<input type="text" name="email" value="<?= $email ?>" class="form-control" id="inputMail">
+				<input type="email" name="email" value="<?= $email ?>" class="form-control" id="inputMail">
 			</div>
 			<div class="col-12">
 				<label for="inputGroup" class="form-label">Номер группы</label>
@@ -53,7 +53,7 @@ require_once('app/controllers/registration.php');
 			</div>
 			<div class="col-12">
 				<label for="inputScore" class="form-label">Проживание</label>
-				<select id="inputState" name="residence" value="<?= $residence ?>" class="form-select">
+				<select id="inputState" name="residence" class="form-select">
 					<option selected></option>
 					<option value="residence">Местный</option>
 					<option value="non-residence">Иногородний</option>
