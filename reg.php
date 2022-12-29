@@ -1,6 +1,5 @@
 <?php
 require_once 'app/controllers/registration.php';
-require_once 'app/controllers/Errors.php';
 
 ?>
 

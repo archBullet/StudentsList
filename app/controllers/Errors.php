@@ -1,7 +1,6 @@
 <?php
 
 
-
 class Errors {
 	static $errName = '';
 	static $errSurname = '';
