@@ -1,0 +1,80 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: rgba(114, 160, 179, 0.749);
+	height: 70px;
+}
+
+header * {
+	color: rgba(27, 22, 18, 0.388);
+}
+
+
+input {
+	padding: 10px 12px;
+	display: block;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #ececec;
+	line-height: 1.5rem;
+	color: #444444;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+header h1 {
+	margin-top: 1px;
+}
+
+header ul li {
+	float: left;
+	position: relative;
+}
+
+header ul li a {
+	display: block;
+	font-size: 1.2rem;
+	padding: 20px;
+}
+
+header ul li a:hover {
+	color: blueviolet;
+}
+
+header ul {
+	float: right;
+}
+
+header ul li ul {
+	position: absolute;
+	width: 200px;
+	display: none;
+	z-index: 111;
+}
+
+header ul li ul li {
+	width: 100%;
+}
+
+header ul li:hover ul {
+	display: block;
+}
+
+
+
+.err {
+	display: block;
+	min-height: 24px;
+	padding-left: 197px;
+	color: red;
+	font-size: 13px;
+	font-style: italic;
+}
+
+.reg_form {
+	max-width: 775px;
+}

@@ -6,26 +6,26 @@ class Student
 	private string $name;
 	private string $surname;
 	private string $gender;
-	private int $birthYear;
+	private $birthYear;
 	private string $email;
-	private string $group_member;
-	private int $score;
+	private string $group;
+	private $score;
 	private string $residence;
 
 	public function __construct(
 		string $name,
 		string $surname,
 		string $gender,
-		int $birthYear,
+		$birthYear,
 		string $email,
-		string $group_member,
-		int $score,
+		string $group,
+		$score,
 		string $residence
 	) {
 		$this->name = $name;
 		$this->surname = $surname;
 		$this->gender = $gender;
-		$this->group_member = $group_member;
+		$this->group = $group;
 		$this->email = $email;
 		$this->score = $score;
 		$this->birthYear = $birthYear;
@@ -44,7 +44,7 @@ class Student
 
 	public function getGroup(): string
 	{
-		return $this->group_member;
+		return $this->group;
 	}
 
 	public function getEmail(): string
@@ -52,12 +52,12 @@ class Student
 		return $this->email;
 	}
 
-	public function getScore(): int
+	public function getScore()
 	{
 		return $this->score;
 	}
 
-	public function getBirthYear(): int
+	public function getBirthYear()
 	{
 		return $this->birthYear;
 	}
