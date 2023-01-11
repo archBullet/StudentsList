@@ -4,9 +4,11 @@ require_once 'app/controllers/Errors.php';
 require_once 'app/controllers/Fields.php';
 
 
-class StudentValidator {
+class StudentValidator
+{
 	private int $val = 0;
-	public function validator(Student $student) {
+	public function validator(Student $student)
+	{
 		if ($student->getName() === '') {
 			Errors::$errName = 'Имя должно содержать хотя бы 2 символа';
 			$this->val++;
@@ -27,7 +29,7 @@ class StudentValidator {
 			Errors::$errBirthYear = 'Год рождения должен быть больше 1970 и не меньше 2020';
 			Fields::$birthYear = '';
 			$this->val++;
-		} 
+		}
 		if ($student->getEmail() === '') {
 			Errors::$errEmail = 'Поле не может быть пустым';
 			$this->val++;
@@ -43,8 +45,8 @@ class StudentValidator {
 			Errors::$errScore = 'Поле должно содержать цифры';
 			Fields::$score = '';
 			$this->val++;
-		} elseif ($student->getScore() > 300) {
-			Errors::$errScore = 'Баллов должно быть не более 300';
+		} elseif ($student->getScore() > 300 || $student->getScore() < 60) {
+			Errors::$errScore = 'Баллов должно быть не более 300 и не менее 60';
 			$this->val++;
 		}
 		if ($student->getResidence() === '') {
@@ -54,7 +56,8 @@ class StudentValidator {
 		return $this;
 	}
 
-	public function isValid() {
+	public function isValid()
+	{
 		if ($this->val === 0) {
 			return true;
 		}

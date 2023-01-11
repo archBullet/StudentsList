@@ -1,7 +1,7 @@
 <?php
 
 
-require_once 'app/database/connect.php';
+require_once 'connect.php';
 require_once 'app/model/Student.php';
 
 class StudentsDataGateway
@@ -50,5 +50,12 @@ class StudentsDataGateway
 		$stmt->execute();
 
 		return $this;
+	}
+
+	public function getStudent() {
+		$stmt = "SELECT name, surname, group_number, score FROM students";
+		$query = $this->pdo->prepare($stmt);
+		$query->execute();
+		return $query->fetchAll();
 	}
 }

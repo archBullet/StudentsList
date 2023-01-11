@@ -64,7 +64,9 @@ header ul li:hover ul {
 	display: block;
 }
 
-
+body {
+	background: linear-gradient(90deg, rgba(202,142,217,0.8916608879880077) 0%, rgba(181,171,182,1) 30%, rgba(160,169,170,1) 70%, rgba(156,255,253,0.8216328767835259) 100%);
+}
 
 .err {
 	display: block;
@@ -77,4 +79,36 @@ header ul li:hover ul {
 
 .reg_form {
 	max-width: 775px;
+}
+
+.head {
+	cursor: pointer;
+}
+
+.wrapper {
+	padding-top: 100px;
+	width: 60%;
+}
+
+.search_area {
+	background-color: transparent;
+}
+
+.search_area::placeholder {
+	color:    rgba(224, 224, 224, 0.942);
+	text-shadow: 0px 0px 2px rgb(36, 36, 36);
+	font-size: 20px;
+} 
+
+.list {
+	font-size: 25px;
+	text-shadow: 0px 0px 24px rgb(255, 255, 255);
+}
+
+.table {
+	border-collapse: unset;
+}
+
+.panel {
+	justify-content: space-between;
 }
