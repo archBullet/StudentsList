@@ -22,6 +22,7 @@ include "path.php";
 </head>
 
 <body>
+	<h1>Список абитуриентов</h1>
 	<div class="container wrapper">
 		<div class="panel form-outline row g-2">
 			<input class="search_area col-auto" type="search" id="form1" class="form-control" placeholder="Поиск" aria-label="Search" />

@@ -18,7 +18,8 @@ require_once 'app/controllers/registration.php';
 </head>
 
 <body>
-	<div class="container reg_form">
+	<h1>Регистрация</h1>
+	<div class="wrapper container reg_form">
 		<form method="POST" action="reg.php">
 			<span class="err">
 				<?= Errors::$errName ?>
