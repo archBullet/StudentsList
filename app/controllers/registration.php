@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn'])) {
 	if ($validate->isValid()) {
 		try {
 			$pdo->addStudent($student);
+			header("Location: index.php");
+			die();
 		} catch (PDOException $e) {
 			echo $e;
 		}

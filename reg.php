@@ -106,13 +106,13 @@ require_once 'app/controllers/registration.php';
 						<div class="form-check">
 							<input class="form-check-input" type="radio" name="residence" id="gridRadios3" value="residence" checked>
 							<label class="form-check-label" for="gridRadios3">
-							Местный
+								Местный
 							</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="radio" name="residence" id="gridRadios4" value="non-residence">
 							<label class="form-check-label" for="gridRadios4">
-							Иногородний
+								Иногородний
 							</label>
 						</div>
 					</div>

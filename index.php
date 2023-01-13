@@ -1,7 +1,7 @@
 <?php
 
 require_once 'app/controllers/StudentsOutput.php';
-
+include "path.php";
 
 ?>
 
@@ -25,7 +25,7 @@ require_once 'app/controllers/StudentsOutput.php';
 	<div class="container wrapper">
 		<div class="panel form-outline row g-2">
 			<input class="search_area col-auto" type="search" id="form1" class="form-control" placeholder="Поиск" aria-label="Search" />
-			<button type="button" class="btn btn-outline-dark col-auto">Редактировать</button>
+			<button type="button" class="btn btn-outline-dark col-auto" onclick="<?php echo "window.location.href = '" . BASE_URL . 'reg.php\''; ?>">Добавить абитуриента</button>
 		</div>
 		<table class="table table-striped">
 			<thead>
