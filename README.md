@@ -10,5 +10,5 @@ Cписок студентов с возможностью регистраци�
 -	Twitter Bootstrap
 
 ## Скриншоты
-![Список абитуриентов](https://github.com/wb3ar/student-list/blob/master/preview_imgs/1.png)
-![Форма добавления абитуриента](https://github.com/wb3ar/student-list/blob/master/preview_imgs/2.png)
+![Список абитуриентов](https://github.com/archBullet/StudentsList/blob/master/preview/prev1.jpg)
+![Форма добавления абитуриента](https://github.com/archBullet/StudentsList/blob/master/preview/prev2.jpg)
