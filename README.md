@@ -7,6 +7,7 @@ Cписок студентов с возможностью регистраци�
 -	шаблон TableDataGateway
 -	MVC
 -	Twitter Bootstrap
+-	jQuery
 
 ## Скриншоты
 ![Список абитуриентов](https://github.com/archBullet/StudentsList/blob/master/preview/prev1.jpg)
